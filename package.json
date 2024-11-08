@@ -1,5 +1,5 @@
 {
-    "name": "MonopolyService",
+    "name": "MonopolyServices",
     "version": "1.0.0",
     "description": "CS 262 Webservice",
     "main": "monopolyService.js",
