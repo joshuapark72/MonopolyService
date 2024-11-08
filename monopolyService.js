@@ -35,6 +35,7 @@ const db = pgp({
   database: process.env.DB_DATABASE,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
+  connectTimeout: 30000, // 30 seconds
 });
 
 // Configure the server and its routes.
@@ -119,3 +120,4 @@ function deletePlayer(req, res, next) {
       next(err);
     });
 }
+
