@@ -37,7 +37,7 @@ const db = pgp({
   password: process.env.DB_PASSWORD,
   ssl: {
     rejectUnauthorized: false,
-  }
+  },
 });
 
 // Configure the server and its routes.

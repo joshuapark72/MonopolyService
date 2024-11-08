@@ -1,9 +1,9 @@
 {
-    "name": "cs262-webservice",
+    "name": "MonopolyService",
     "version": "1.0.0",
     "description": "CS 262 Webservice",
     "main": "monopolyService.js",
-    "author": "kvlinden",
+    "author": "joshuapark72",
     "license": "ISC",
     "engines": {
       "node": "18.x"
