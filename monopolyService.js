@@ -55,6 +55,9 @@ router.get('/players/:id', readPlayer);
 router.put('/players/:id', updatePlayer);
 router.post('/players', createPlayer);
 router.delete('/players/:id', deletePlayer);
+router.get('/games', readGames);
+router.get('/games/scores', getScores);
+
 
 app.use(router);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -123,3 +126,22 @@ function deletePlayer(req, res, next) {
     });
 }
 
+function readGames(req, res, next){
+  db.many('SELECT * FROM Game')
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      next(err);
+    });
+}
+
+function getScores(req,res,next){
+  db.any('SELECT * FROM PlayerGame')
+  .then((data) => {
+    res.send(data);
+  })
+  .catch((err) => {
+    next(err);
+  });
+}
